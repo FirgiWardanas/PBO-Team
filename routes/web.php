@@ -22,6 +22,7 @@ Route::get('/student/{id}', [StudentController::class, 'show'])
  
 Route::get('/student/edit/{id}', [StudentController::class, 'edit']) 
     ->name('student.edit'); 
+    
 Route::PUT('/student/edit/{id}', [StudentController::class, 'update']) 
     ->name('student.update'); 
  
