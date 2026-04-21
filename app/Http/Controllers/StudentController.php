@@ -79,16 +79,16 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        $student = Student::where(['nim' => $id]);
+        $student = Student::where(['nim' => $id ]);
 
-        if ($student->count() < 1) {
+        if ( $student->count() < 1 ) {
             return redirect('/student')->with([
                 'notifikasi' => 'Data siswa tidak ditemukan !',
                 'type' => 'error'
-            ]);
-        }
+        ]);
+    }
 
-        return view('student.edit', ['student' => $student->first()]);
+        return view('student.edit', ['student' => $student->first() ]);
     }
 
     /**
